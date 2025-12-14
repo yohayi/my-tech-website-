@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="流式AI环境监控系统技术架构、算法和实现细节">
+    <title>技术架构 | 流式AI环境监控系统</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-brain"></i>
+                <span>流式AI监控</span>
+            </a>
+            <button class="nav-toggle" aria-label="导航菜单">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> 首页</a></li>
+                <li><a href="technical.html" class="active"><i class="fas fa-cogs"></i> 技术细节</a></li>
+                <li><a href="demo.html"><i class="fas fa-video"></i> 演示案例</a></li>
+                <li><a href="patent.html"><i class="fas fa-file-contract"></i> 专利文档</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> 联系我们</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>技术架构与实现</h1>
+            <p>深入了解我们的四层流式处理架构、核心算法和关键技术</p>
+        </div>
+    </section>
+
+    <section class="tech-architecture">
+        <div class="container">
+            <h2 class="section-title">四层流式处理架构</h2>
+            <div class="architecture-diagram">
+                <div class="arch-layer">
+                    <div class="layer-header">
+                        <div class="layer-number">1</div>
+                        <h3>感知与边缘转发层</h3>
+                    </div>
+                    <div class="layer-content">
+                        <p><strong>核心方法：</strong> "采集即发布"</p>
+                        <ul>
+                            <li>传感器节点在数据就绪时立即封装为MQTT消息发布</li>
+                            <li>避免传统"采集-存储-定时上报"模式</li>
+                            <li>支持DHT22、BH1750、摄像头等多种传感器</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="arch-arrow">
+                    <i class="fas fa-arrow-down"></i>
+                </div>
+                
+                <div class="arch-layer">
+                    <div class="layer-header">
+                        <div class="layer-number">2</div>
+                        <h3>流式数据总线层</h3>
+                    </div>
+                    <div class="layer-content">
+                        <p><strong>核心方法：</strong> "事件驱动通信"</p>
+                        <ul>
+                            <li>基于MQTT的发布/订阅模式</li>
+                            <li>实现数据流的异步、解耦和实时分发</li>
+                            <li>支持1000+ msg/s的高吞吐量</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="arch-arrow">
+                    <i class="fas fa-arrow-down"></i>
+                </div>
+                
+                <div class="arch-layer">
+                    <div class="layer-header">
+                        <div class="layer-number">3</div>
+                        <h3>实时AI决策与存储层</h3>
+                    </div>
+                    <div class="layer-content">
+                        <p><strong>核心方法：</strong> "到达即推理，并行处理"</p>
+                        <ul>
+                            <li>数据到达即触发AI模型推理</li>
+                            <li>同时执行存储和反馈指令生成</li>
+                            <li>使用时序数据库(InfluxDB)优化存储</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="arch-arrow">
+                    <i class="fas fa-arrow-down"></i>
+                </div>
+                
+                <div class="arch-layer">
+                    <div class="layer-header">
+                        <div class="layer-number">4</div>
+                        <h3>即时反馈与执行层</h3>
+                    </div>
+                    <div class="layer-content">
+                        <p><strong>核心方法：</strong> "指令即执行"</p>
+                        <ul>
+                            <li>控制指令通过MQTT实时下发</li>
+                            <li>执行器即时响应并反馈状态</li>
+                            <li>形成完整的感知-决策-执行闭环</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="core-algorithms">
+        <div class="container">
+            <h2 class="section-title">核心算法与数学模型</h2>
+            
+            <div class="algorithm-card">
+                <div class="algo-header">
+                    <h3>多模态数据融合算法</h3>
+                    <span class="algo-tag">创新点2</span>
+                </div>
+                <div class="algo-content">
+                    <p>基于注意力机制的多模态数据融合：</p>
+                    <div class="algo-formula">
+                        F = ∑<sub>i=1</sub><sup>N</sup> α<sub>i</sub> · φ<sub>i</sub>(X<sub>i</sub>)
+                    </div>
+                    <p>其中α<sub>i</sub>为注意力权重：</p>
+                    <div class="algo-formula">
+                        α<sub>i</sub> = exp(MLP([X<sub>i</sub>; Context])) / ∑<sub>j=1</sub><sup>N</sup> exp(MLP([X<sub>j</sub>; Context]))
+                    </div>
+                </div>
+            </div>
+            
+            <div class="algorithm-card">
+                <div class="algo-header">
+                    <h3>实时决策反馈机制</h3>
+                    <span class="algo-tag">创新点3</span>
+                </div>
+                <div class="algo-content">
+                    <p>并行推理多个AI模型，加权融合决策：</p>
+                    <pre class="code-block"><code>def RealTimeDecision(data, models):
+    decisions = {}
+    for model in models:  # 并行推理
+        pred = model.predict(data)
+        decisions[model.name] = pred
+    
+    risk_score = FusionDecision(decisions)
+    
+    if risk_score > threshold:
+        # 并行执行
+        PublishControl(GenerateCommand(risk_score))  # 线程A
+        StoreDecision(data, decisions)               # 线程B</code></pre>
+                </div>
+            </div>
+            
+            <div class="algorithm-card">
+                <div class="algo-header">
+                    <h3>时空数据优化管理</h3>
+                    <span class="algo-tag">创新点4</span>
+                </div>
+                <div class="algo-content">
+                    <p>层次化标签索引体系和时间分片存储：</p>
+                    <ul>
+                        <li>为每个数据点建立多级标签：设备ID、传感器类型、地理位置</li>
+                        <li>按时间维度自动分片存储：shard_id = ⌊timestamp/T⌋</li>
+                        <li>预计算实时聚合视图，支持毫秒级查询</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hardware-software">
+        <div class="container">
+            <h2 class="section-title" id="hardware">硬件与软件配置</h2>
+            
+            <div class="hw-sw-grid">
+                <div class="hw-sw-card">
+                    <h3><i class="fas fa-microchip"></i> 硬件配置</h3>
+                    <table class="config-table">
+                        <tr>
+                            <th>设备类型</th>
+                            <th>型号/规格</th>
+                            <th>功能</th>
+                        </tr>
+                        <tr>
+                            <td>主控服务器</td>
+                            <td>联想拯救者Y9000P</td>
+                            <td>AI推理、数据存储</td>
+                        </tr>
+                        <tr>
+                            <td>传感器节点</td>
+                            <td>ESP8266 + DHT22</td>
+                            <td>温湿度监测</td>
+                        </tr>
+                        <tr>
+                            <td>视觉节点</td>
+                            <td>树莓派4B + 摄像头</td>
+                            <td>视频监控</td>
+                        </tr>
+                        <tr>
+                            <td>执行器设备</td>
+                            <td>智能控制器</td>
+                            <td>环境调节控制</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="hw-sw-card">
+                    <h3><i class="fas fa-code"></i> 软件栈</h3>
+                    <table class="config-table">
+                        <tr>
+                            <th>组件</th>
+                            <th>技术选型</th>
+                            <th>作用</th>
+                        </tr>
+                        <tr>
+                            <td>通信协议</td>
+                            <td>MQTT (Mosquitto)</td>
+                            <td>数据流传输</td>
+                        </tr>
+                        <tr>
+                            <td>AI框架</td>
+                            <td>TensorFlow Lite</td>
+                            <td>实时推理</td>
+                        </tr>
+                        <tr>
+                            <td>数据库</td>
+                            <td>InfluxDB</td>
+                            <td>时序数据存储</td>
+                        </tr>
+                        <tr>
+                            <td>监控界面</td>
+                            <td>Grafana</td>
+                            <td>数据可视化</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="code-examples" id="code">
+        <div class="container">
+            <h2 class="section-title">核心代码示例</h2>
+            
+            <div class="code-tabs">
+                <div class="tab-buttons">
+                    <button class="tab-button active" data-tab="sensor">传感器节点</button>
+                    <button class="tab-button" data-tab="ai">AI推理服务</button>
+                    <button class="tab-button" data-tab="fusion">数据融合</button>
+                </div>
+                
+                <div class="tab-content active" id="sensor">
+                    <h3>传感器节点 - "采集即发布"方法</h3>
+                    <pre><code>class SensorNode:
+    def __init__(self, sensor_type, mqtt_client):
+        self.sensor_type = sensor_type
+        self.mqtt_client = mqtt_client
+        
+    def continuous_monitoring(self):
+        """持续监控并实时发布数据"""
+        while True:
+            current_value = self.read_sensor()
+            if self.is_significant_change(current_value):
+                message = self.format_message(current_value)
+                topic = f"sensor/{self.sensor_type}/{self.id}"
+                # 关键方法：数据就绪立即发布
+                self.mqtt_client.publish(topic, message)
+            time.sleep(0.001)  # 1ms延迟</code></pre>
+                </div>
+                
+                <div class="tab-content" id="ai">
+                    <h3>流式AI推理服务</h3>
+                    <pre><code>class StreamingAIService:
+    def on_message_arrival(self, topic, payload):
+        """MQTT消息到达回调 - 核心处理方法"""
+        start_time = time.time()
+        
+        data = self.parse_payload(payload)
+        context = self.get_context(topic)
+        
+        # 多模态数据融合
+        fused_features = self.data_fusion(data, context)
+        
+        # 并行推理多个模型
+        results = {}
+        for model_name, model in self.models.items():
+            if self.should_apply(model_name, topic):
+                results[model_name] = model.predict(fused_features)
+        
+        # 决策融合
+        risk_score = self.decision_fusion(results)
+        
+        # 并行处理：反馈+存储
+        if risk_score > THRESHOLD:
+            control_topic = self.map_to_control(topic)
+            self.mqtt_client.publish(control_topic, 
+                self.generate_control_command(risk_score))
+            self.influx_client.write(data, risk_score)
+        
+        total_time = time.time() - start_time
+        print(f"总处理时间: {total_time*1000:.2f}ms")</code></pre>
+                </div>
+                
+                <div class="tab-content" id="fusion">
+                    <h3>多模态数据融合</h3>
+                    <pre><code>class MultiModalDataFusion:
+    def adaptive_time_alignment(self, sensor_data_list):
+        """自适应时间对齐算法"""
+        aligned_data = []
+        base_time = sensor_data_list[0]['timestamp']
+        
+        for data in sensor_data_list:
+            time_diff = data['timestamp'] - base_time
+            if abs(time_diff) > self.time_window:
+                aligned = self.linear_interpolation(data, base_time)
+            else:
+                aligned = data
+            
+            # 更新传感器置信度权重
+            weight = self.calculate_confidence_weight(aligned)
+            self.sensor_weights[data['sensor_id']] = weight
+            
+            aligned_data.append({'data': aligned, 'weight': weight})
+        
+        return aligned_data</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="performance-metrics">
+        <div class="container">
+            <h2 class="section-title">性能指标</h2>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-value">156ms</div>
+                    <div class="metric-label">端到端延迟</div>
+                    <div class="metric-desc">相比传统系统提升97%</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">1245 msg/s</div>
+                    <div class="metric-label">系统吞吐量</div>
+                    <div class="metric-desc">相比传统系统提升573%</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">96.8%</div>
+                    <div class="metric-label">异常检出率</div>
+                    <div class="metric-desc">误报率仅1.1%</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">99.94%</div>
+                    <div class="metric-label">系统可用性</div>
+                    <div class="metric-desc">72小时连续运行</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>流式AI环境监控系统</h4>
+                    <p>基于流式处理和实时AI决策的环境智能监控与反馈系统</p>
+                </div>
+                <div class="footer-col">
+                    <h4>技术资源</h4>
+                    <ul>
+                        <li><a href="docs/technical-disclosure.pdf" target="_blank">技术交底书</a></li>
+                        <li><a href="patent.html">专利申请</a></li>
+                        <li><a href="#hardware">硬件配置</a></li>
+                        <li><a href="#code">示例代码</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-user"></i> 游海洋</li>
+                        <li><i class="fas fa-envelope"></i> youhaiyang@example.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 流式AI环境监控系统. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

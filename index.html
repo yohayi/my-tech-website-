@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="实时流式AI环境监控系统 - 从感知到行动的毫秒级智能闭环">
-    <meta name="keywords" content="AI监控, 环境监控, 流式处理, 物联网, 实时系统">
-    <title>流式AI环境监控系统 | 实时智能监控解决方案</title>
+    <meta name="description" content="流式AI环境监控系统与Yohayi网站导航中心 - 整合平台">
+    <meta name="keywords" content="AI监控, 环境监控, 流式处理, 网站导航, 技术交流, 教育数据, 游戏开发">
+    <title>流式AI监控 | 网站导航中心</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
@@ -24,7 +24,7 @@
         }
         
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             padding: 0 20px;
         }
@@ -71,7 +71,7 @@
         .nav-menu {
             display: flex;
             list-style: none;
-            gap: 2rem;
+            gap: 1.5rem;
         }
         
         .nav-menu a {
@@ -82,18 +82,77 @@
             display: flex;
             align-items: center;
             gap: 5px;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
         }
         
         .nav-menu a:hover,
         .nav-menu a.active {
             color: #3498db;
+            background-color: rgba(52, 152, 219, 0.1);
         }
         
-        /* 英雄区域样式 */
+        /* 主内容区域 */
+        .main-content {
+            padding: 2rem 0;
+        }
+        
+        /* 选项卡样式 */
+        .tabs {
+            display: flex;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .tab-btn {
+            flex: 1;
+            padding: 1.2rem;
+            background: none;
+            border: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #666;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .tab-btn:hover {
+            background-color: #f8f9fa;
+        }
+        
+        .tab-btn.active {
+            background-color: #3498db;
+            color: white;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* 流式AI监控原有样式 */
         .hero {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             padding: 4rem 0;
+            border-radius: 15px;
+            margin-bottom: 3rem;
         }
         
         .hero .container {
@@ -182,10 +241,11 @@
             font-size: 1.2rem;
         }
         
-        /* 核心特点样式 */
         .features {
-            padding: 4rem 0;
+            padding: 3rem 0;
             background: white;
+            border-radius: 15px;
+            margin-bottom: 3rem;
         }
         
         .section-title {
@@ -232,10 +292,11 @@
             display: block;
         }
         
-        /* 技术对比样式 */
         .comparison {
-            padding: 4rem 0;
+            padding: 3rem 0;
             background: #f8f9fa;
+            border-radius: 15px;
+            margin-bottom: 3rem;
         }
         
         .comparison-table {
@@ -287,10 +348,11 @@
             color: #155724;
         }
         
-        /* 应用场景样式 */
         .applications {
-            padding: 4rem 0;
+            padding: 3rem 0;
             background: white;
+            border-radius: 15px;
+            margin-bottom: 3rem;
         }
         
         .applications-grid {
@@ -334,12 +396,13 @@
             margin-top: 1rem;
         }
         
-        /* CTA区域样式 */
         .cta {
             background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
             color: white;
             text-align: center;
             padding: 4rem 0;
+            border-radius: 15px;
+            margin-bottom: 3rem;
         }
         
         .cta h2 {
@@ -357,11 +420,223 @@
             font-size: 1.1rem;
         }
         
+        /* 网站导航中心样式 */
+        .navigation-header {
+            padding: 3rem 0 1rem;
+            text-align: center;
+        }
+        
+        .navigation-header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #3498db, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .navigation-header p {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+        
+        .search-container {
+            max-width: 600px;
+            margin: 2rem auto 3rem;
+            position: relative;
+        }
+        
+        .search-box {
+            width: 100%;
+            padding: 1.2rem 1.5rem;
+            padding-left: 3rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .search-box:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+        }
+        
+        .search-icon {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #666;
+            font-size: 1.2rem;
+        }
+        
+        .stats-panel {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 3rem;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #3498db;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-size: 1rem;
+        }
+        
+        .websites-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+        
+        .website-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .website-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card-header {
+            padding: 1.5rem 1.5rem 0;
+        }
+        
+        .website-category {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            background: linear-gradient(135deg, #3498db, #764ba2);
+            color: white;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        
+        .website-title {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .website-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #3498db, #764ba2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+        
+        .website-description {
+            color: #666;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+        
+        .card-content {
+            padding: 0 1.5rem;
+            flex-grow: 1;
+        }
+        
+        .website-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .website-status {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .status-indicator {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #28a745;
+        }
+        
+        .status-indicator.warning {
+            background-color: #ffc107;
+        }
+        
+        .status-indicator.danger {
+            background-color: #dc3545;
+        }
+        
+        .card-footer {
+            padding: 1.5rem;
+            background-color: #f8f9fa;
+            border-top: 1px solid #eee;
+        }
+        
+        .website-link {
+            display: block;
+            text-align: center;
+            padding: 0.8rem;
+            background: linear-gradient(135deg, #3498db, #764ba2);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        
+        .website-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+        }
+        
+        .website-link i {
+            margin-right: 8px;
+        }
+        
         /* 页脚样式 */
         .footer {
             background: #2c3e50;
             color: white;
             padding: 3rem 0 1rem;
+            margin-top: 4rem;
         }
         
         .footer-grid {
@@ -372,8 +647,8 @@
         }
         
         .footer-col h4 {
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
         }
         
         .footer-col ul {
@@ -381,7 +656,7 @@
         }
         
         .footer-col ul li {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.8rem;
         }
         
         .footer-col a {
@@ -397,7 +672,7 @@
         .social-links {
             display: flex;
             gap: 1rem;
-            margin-top: 1rem;
+            margin-top: 1.5rem;
         }
         
         .social-links a {
@@ -469,6 +744,18 @@
             .row-cell:first-child {
                 display: none;
             }
+            
+            .tabs {
+                flex-direction: column;
+            }
+            
+            .websites-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .navigation-header h1 {
+                font-size: 2.2rem;
+            }
         }
         
         @media (max-width: 480px) {
@@ -484,6 +771,14 @@
             .applications-grid {
                 grid-template-columns: 1fr;
             }
+            
+            .navigation-header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -491,224 +786,282 @@
     <!-- 导航栏 -->
     <nav class="navbar">
         <div class="container">
-            <a href="index.html" class="logo">
+            <a href="#" class="logo">
                 <i class="fas fa-brain"></i>
-                <span>流式AI监控</span>
+                <span>AI监控与导航</span>
             </a>
             <button class="nav-toggle" aria-label="导航菜单">
                 <i class="fas fa-bars"></i>
             </button>
             <ul class="nav-menu">
-                <li><a href="index.html" class="active"><i class="fas fa-home"></i> 首页</a></li>
-                <li><a href="technical.html"><i class="fas fa-cogs"></i> 技术细节</a></li>
-                <li><a href="demo.html"><i class="fas fa-video"></i> 演示案例</a></li>
-                <li><a href="patent.html"><i class="fas fa-file-contract"></i> 专利文档</a></li>
-                <li><a href="contact.html"><i class="fas fa-envelope"></i> 联系我们</a></li>
+                <li><a href="#ai-monitoring" class="active" id="ai-monitoring-tab-btn"><i class="fas fa-robot"></i> AI监控系统</a></li>
+                <li><a href="#website-navigation" id="website-navigation-tab-btn"><i class="fas fa-globe"></i> 网站导航</a></li>
+                <li><a href="#technical-details"><i class="fas fa-cogs"></i> 技术细节</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> 联系我们</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- 英雄区域 -->
-    <section class="hero">
+    <!-- 主内容区域 -->
+    <main class="main-content">
         <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">实时流式AI环境监控系统</h1>
-                <p class="hero-subtitle">从"回合制"到"实时战斗"的革命性转变</p>
-                <p class="hero-description">
-                    基于MQTT流式数据处理和实时AI推理，实现毫秒级环境感知、决策和反馈闭环。
-                    将响应时间从秒级降低到毫秒级，开启智能监控新时代。
-                </p>
-                <div class="hero-buttons">
-                    <a href="technical.html" class="btn btn-primary">了解技术</a>
-                    <a href="demo.html" class="btn btn-secondary">查看演示</a>
-                </div>
+            <!-- 选项卡 -->
+            <div class="tabs">
+                <button class="tab-btn active" id="ai-monitoring-tab">
+                    <i class="fas fa-robot"></i> 流式AI监控系统
+                </button>
+                <button class="tab-btn" id="website-navigation-tab">
+                    <i class="fas fa-globe"></i> 网站导航中心
+                </button>
             </div>
-            <div class="hero-visual">
-                <div class="system-flow">
-                    <div class="flow-step">
-                        <div class="flow-icon"><i class="fas fa-temperature-high"></i></div>
-                        <div class="flow-text">感知层</div>
-                        <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
+            
+            <!-- 流式AI监控内容 -->
+            <div id="ai-monitoring-content" class="tab-content active">
+                <!-- 英雄区域 -->
+                <section class="hero">
+                    <div class="container">
+                        <div class="hero-content">
+                            <h1 class="hero-title">实时流式AI环境监控系统</h1>
+                            <p class="hero-subtitle">从"回合制"到"实时战斗"的革命性转变</p>
+                            <p class="hero-description">
+                                基于MQTT流式数据处理和实时AI推理，实现毫秒级环境感知、决策和反馈闭环。
+                                将响应时间从秒级降低到毫秒级，开启智能监控新时代。
+                            </p>
+                            <div class="hero-buttons">
+                                <a href="#technical-details" class="btn btn-primary">了解技术</a>
+                                <a href="#applications" class="btn btn-secondary">查看应用</a>
+                            </div>
+                        </div>
+                        <div class="hero-visual">
+                            <div class="system-flow">
+                                <div class="flow-step">
+                                    <div class="flow-icon"><i class="fas fa-temperature-high"></i></div>
+                                    <div class="flow-text">感知层</div>
+                                    <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
+                                </div>
+                                <div class="flow-step">
+                                    <div class="flow-icon"><i class="fas fa-satellite-dish"></i></div>
+                                    <div class="flow-text">数据流</div>
+                                    <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
+                                </div>
+                                <div class="flow-step">
+                                    <div class="flow-icon"><i class="fas fa-robot"></i></div>
+                                    <div class="flow-text">AI推理</div>
+                                    <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
+                                </div>
+                                <div class="flow-step">
+                                    <div class="flow-icon"><i class="fas fa-bolt"></i></div>
+                                    <div class="flow-text">即时反馈</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="flow-step">
-                        <div class="flow-icon"><i class="fas fa-satellite-dish"></i></div>
-                        <div class="flow-text">数据流</div>
-                        <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
-                    </div>
-                    <div class="flow-step">
-                        <div class="flow-icon"><i class="fas fa-robot"></i></div>
-                        <div class="flow-text">AI推理</div>
-                        <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
-                    </div>
-                    <div class="flow-step">
-                        <div class="flow-icon"><i class="fas fa-bolt"></i></div>
-                        <div class="flow-text">即时反馈</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                </section>
 
-    <!-- 核心特点 -->
-    <section class="features">
-        <div class="container">
-            <h2 class="section-title">核心创新特点</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-bolt"></i>
+                <!-- 核心特点 -->
+                <section class="features">
+                    <div class="container">
+                        <h2 class="section-title">核心创新特点</h2>
+                        <div class="features-grid">
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-bolt"></i>
+                                </div>
+                                <h3>毫秒级响应</h3>
+                                <p>从传统5-10秒响应降低到50-200毫秒，实现真正的实时监控和干预。</p>
+                                <div class="feature-stats">
+                                    <span class="stat-number">25-200x</span>
+                                    <span class="stat-text">性能提升</span>
+                                </div>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-stream"></i>
+                                </div>
+                                <h3>流式处理架构</h3>
+                                <p>事件驱动架构替代传统轮询模式，数据到达即触发处理，无等待延迟。</p>
+                                <div class="feature-stats">
+                                    <span class="stat-number">1000+</span>
+                                    <span class="stat-text">msg/秒吞吐量</span>
+                                </div>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <h3>智能并行决策</h3>
+                                <p>多模态数据融合与并行AI推理，实现精准的环境异常检测和预测。</p>
+                                <div class="feature-stats">
+                                    <span class="stat-number">96.8%</span>
+                                    <span class="stat-text">异常检出率</span>
+                                </div>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <h3>时空数据优化</h3>
+                                <p>专门优化的时序数据库，支持毫秒级查询和历史数据分析。</p>
+                                <div class="feature-stats">
+                                    <span class="stat-number">99.94%</span>
+                                    <span class="stat-text">系统可用性</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <h3>毫秒级响应</h3>
-                    <p>从传统5-10秒响应降低到50-200毫秒，实现真正的实时监控和干预。</p>
-                    <div class="feature-stats">
-                        <span class="stat-number">25-200x</span>
-                        <span class="stat-text">性能提升</span>
-                    </div>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-stream"></i>
-                    </div>
-                    <h3>流式处理架构</h3>
-                    <p>事件驱动架构替代传统轮询模式，数据到达即触发处理，无等待延迟。</p>
-                    <div class="feature-stats">
-                        <span class="stat-number">1000+</span>
-                        <span class="stat-text">msg/秒吞吐量</span>
-                    </div>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3>智能并行决策</h3>
-                    <p>多模态数据融合与并行AI推理，实现精准的环境异常检测和预测。</p>
-                    <div class="feature-stats">
-                        <span class="stat-number">96.8%</span>
-                        <span class="stat-text">异常检出率</span>
-                    </div>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <h3>时空数据优化</h3>
-                    <p>专门优化的时序数据库，支持毫秒级查询和历史数据分析。</p>
-                    <div class="feature-stats">
-                        <span class="stat-number">99.94%</span>
-                        <span class="stat-text">系统可用性</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                </section>
 
-    <!-- 技术对比 -->
-    <section class="comparison">
-        <div class="container">
-            <h2 class="section-title">与传统系统的对比</h2>
-            <div class="comparison-table">
-                <div class="table-header">
-                    <div class="header-cell"></div>
-                    <div class="header-cell">传统轮询系统</div>
-                    <div class="header-cell">我们的流式系统</div>
-                </div>
-                <div class="table-row">
-                    <div class="row-cell">响应延迟</div>
-                    <div class="row-cell"><span class="badge bad">5-10秒</span></div>
-                    <div class="row-cell"><span class="badge good">50-200毫秒</span></div>
-                </div>
-                <div class="table-row">
-                    <div class="row-cell">系统吞吐量</div>
-                    <div class="row-cell"><span class="badge bad">100-200 msg/s</span></div>
-                    <div class="row-cell"><span class="badge good">1000+ msg/s</span></div>
-                </div>
-                <div class="table-row">
-                    <div class="row-cell">异常检出率</div>
-                    <div class="row-cell"><span class="badge medium">85-90%</span></div>
-                    <div class="row-cell"><span class="badge good">95-98%</span></div>
-                </div>
-                <div class="table-row">
-                    <div class="row-cell">交互模式</div>
-                    <div class="row-cell"><span class="badge bad">被动响应</span></div>
-                    <div class="row-cell"><span class="badge good">主动干预</span></div>
-                </div>
-                <div class="table-row">
-                    <div class="row-cell">数据连续性</div>
-                    <div class="row-cell"><span class="badge medium">离散采样</span></div>
-                    <div class="row-cell"><span class="badge good">连续数据流</span></div>
-                </div>
-            </div>
-        </div>
-    </section>
+                <!-- 技术对比 -->
+                <section class="comparison">
+                    <div class="container">
+                        <h2 class="section-title">与传统系统的对比</h2>
+                        <div class="comparison-table">
+                            <div class="table-header">
+                                <div class="header-cell"></div>
+                                <div class="header-cell">传统轮询系统</div>
+                                <div class="header-cell">我们的流式系统</div>
+                            </div>
+                            <div class="table-row">
+                                <div class="row-cell">响应延迟</div>
+                                <div class="row-cell"><span class="badge bad">5-10秒</span></div>
+                                <div class="row-cell"><span class="badge good">50-200毫秒</span></div>
+                            </div>
+                            <div class="table-row">
+                                <div class="row-cell">系统吞吐量</div>
+                                <div class="row-cell"><span class="badge bad">100-200 msg/s</span></div>
+                                <div class="row-cell"><span class="badge good">1000+ msg/s</span></div>
+                            </div>
+                            <div class="table-row">
+                                <div class="row-cell">异常检出率</div>
+                                <div class="row-cell"><span class="badge medium">85-90%</span></div>
+                                <div class="row-cell"><span class="badge good">95-98%</span></div>
+                            </div>
+                            <div class="table-row">
+                                <div class="row-cell">交互模式</div>
+                                <div class="row-cell"><span class="badge bad">被动响应</span></div>
+                                <div class="row-cell"><span class="badge good">主动干预</span></div>
+                            </div>
+                            <div class="table-row">
+                                <div class="row-cell">数据连续性</div>
+                                <div class="row-cell"><span class="badge medium">离散采样</span></div>
+                                <div class="row-cell"><span class="badge good">连续数据流</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-    <!-- 应用场景 -->
-    <section class="applications">
-        <div class="container">
-            <h2 class="section-title">应用场景</h2>
-            <div class="applications-grid">
-                <div class="app-card">
-                    <div class="app-image">
-                        <i class="fas fa-flask"></i>
+                <!-- 应用场景 -->
+                <section class="applications" id="applications">
+                    <div class="container">
+                        <h2 class="section-title">应用场景</h2>
+                        <div class="applications-grid">
+                            <div class="app-card">
+                                <div class="app-image">
+                                    <i class="fas fa-flask"></i>
+                                </div>
+                                <div class="app-content">
+                                    <h3>实验室安全监控</h3>
+                                    <p>实时监测温度、湿度、气体浓度和人员活动，毫秒级响应异常情况。</p>
+                                    <a href="#" class="app-link">查看案例 <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                            <div class="app-card">
+                                <div class="app-image">
+                                    <i class="fas fa-seedling"></i>
+                                </div>
+                                <div class="app-content">
+                                    <h3>智能农业温室</h3>
+                                    <p>多目标优化控制，根据作物生长阶段自动调节环境参数。</p>
+                                    <a href="#" class="app-link">查看案例 <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                            <div class="app-card">
+                                <div class="app-image">
+                                    <i class="fas fa-industry"></i>
+                                </div>
+                                <div class="app-content">
+                                    <h3>工业物联网</h3>
+                                    <p>设备状态监测与预测性维护，降低停机时间和维护成本。</p>
+                                    <a href="#" class="app-link">查看案例 <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                            <div class="app-card">
+                                <div class="app-image">
+                                    <i class="fas fa-home"></i>
+                                </div>
+                                <div class="app-content">
+                                    <h3>智慧家居</h3>
+                                    <p>智能环境调节和安防监控，提升居住舒适度和安全性。</p>
+                                    <a href="#" class="app-link">查看案例 <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="app-content">
-                        <h3>实验室安全监控</h3>
-                        <p>实时监测温度、湿度、气体浓度和人员活动，毫秒级响应异常情况。</p>
-                        <a href="demo.html#lab" class="app-link">查看案例 <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="app-card">
-                    <div class="app-image">
-                        <i class="fas fa-seedling"></i>
-                    </div>
-                    <div class="app-content">
-                        <h3>智能农业温室</h3>
-                        <p>多目标优化控制，根据作物生长阶段自动调节环境参数。</p>
-                        <a href="demo.html#agriculture" class="app-link">查看案例 <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="app-card">
-                    <div class="app-image">
-                        <i class="fas fa-industry"></i>
-                    </div>
-                    <div class="app-content">
-                        <h3>工业物联网</h3>
-                        <p>设备状态监测与预测性维护，降低停机时间和维护成本。</p>
-                        <a href="demo.html#industry" class="app-link">查看案例 <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="app-card">
-                    <div class="app-image">
-                        <i class="fas fa-home"></i>
-                    </div>
-                    <div class="app-content">
-                        <h3>智慧家居</h3>
-                        <p>智能环境调节和安防监控，提升居住舒适度和安全性。</p>
-                        <a href="demo.html#smart-home" class="app-link">查看案例 <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                </section>
 
-    <!-- CTA区域 -->
-    <section class="cta">
-        <div class="container">
-            <h2>准备好体验下一代环境监控技术了吗？</h2>
-            <p>我们的技术已经完成原型验证，正在寻求合作伙伴和投资者。</p>
-            <div class="cta-buttons">
-                <a href="contact.html" class="btn btn-primary btn-large">立即联系</a>
-                <a href="patent.html" class="btn btn-secondary btn-large">查看专利</a>
+                <!-- CTA区域 -->
+                <section class="cta">
+                    <div class="container">
+                        <h2>准备好体验下一代环境监控技术了吗？</h2>
+                        <p>我们的技术已经完成原型验证，正在寻求合作伙伴和投资者。</p>
+                        <div class="cta-buttons">
+                            <a href="#contact" class="btn btn-primary btn-large">立即联系</a>
+                            <a href="#technical-details" class="btn btn-secondary btn-large">技术文档</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            
+            <!-- 网站导航中心内容 -->
+            <div id="website-navigation-content" class="tab-content">
+                <!-- 头部区域 -->
+                <header class="navigation-header">
+                    <h1>Yohayi项目网站导航</h1>
+                    <p>整合所有GitHub Pages网站项目，一站式访问和管理。所有网站均部署在GitHub Pages上，支持HTTPS访问。</p>
+                    
+                    <div class="search-container">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" class="search-box" id="website-search" placeholder="搜索网站名称、描述或关键词...">
+                    </div>
+                </header>
+
+                <!-- 统计面板 -->
+                <section class="stats-panel">
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number">8</div>
+                            <div class="stat-label">网站总数</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">HTTPS安全</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" id="online-count">7</div>
+                            <div class="stat-label">在线网站</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" id="warning-count">1</div>
+                            <div class="stat-label">待更新</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 网站卡片区域 -->
+                <div class="websites-grid" id="websitesContainer">
+                    <!-- 网站卡片将通过JavaScript动态生成 -->
+                </div>
             </div>
         </div>
-    </section>
+    </main>
 
     <!-- 页脚 -->
-    <footer class="footer">
+    <footer class="footer" id="contact">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h4>流式AI环境监控系统</h4>
-                    <p>基于流式处理和实时AI决策的环境智能监控与反馈系统，实现从感知到行动的毫秒级智能闭环。</p>
+                    <h4>AI监控与网站导航</h4>
+                    <p>基于流式处理和实时AI决策的环境智能监控与反馈系统，整合Yohayi的所有项目网站。</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-github"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -719,11 +1072,10 @@
                 <div class="footer-col">
                     <h4>快速链接</h4>
                     <ul>
-                        <li><a href="index.html">首页</a></li>
-                        <li><a href="technical.html">技术细节</a></li>
-                        <li><a href="demo.html">演示案例</a></li>
-                        <li><a href="patent.html">专利文档</a></li>
-                        <li><a href="contact.html">联系我们</a></li>
+                        <li><a href="#ai-monitoring" class="tab-switch" data-tab="ai-monitoring">AI监控系统</a></li>
+                        <li><a href="#website-navigation" class="tab-switch" data-tab="website-navigation">网站导航</a></li>
+                        <li><a href="#technical-details">技术细节</a></li>
+                        <li><a href="#contact">联系我们</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -732,10 +1084,11 @@
                         <li><a href="https://yohayi.github.io/-history/" target="_blank">信技化生-技术交流网站</a></li>
                         <li><a href="https://yohayi.github.io/jinghongzhai--/" target="_blank">"惊鸿斋"官方网站</a></li>
                         <li><a href="https://yohayi.github.io/my-personal-edu-website/" target="_blank">杭州市教育总结</a></li>
-                        <li><a href="https://yohayi.github.io/2026--/index.html" target="_blank">教育数据与交流网站(改为流式AI监控)</a></li>
+                        <li><a href="https://yohayi.github.io/2026--/index.html" target="_blank">教育数据与交流网站</a></li>
                         <li><a href="https://yohayi.github.io/geometry-string-map/" target="_blank">几何弦理论课后交流-网站</a></li>
                         <li><a href="https://yohayi.github.io/BDCG---/" target="_blank">BDCG游戏技术与美术素材网站</a></li>
                         <li><a href="https://yohayi.github.io/yohayi-/" target="_blank">游海洋个人网站</a></li>
+                        <li><a href="https://yohayi.github.io/-AI-/" target="_blank">流式AI监控</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -748,28 +1101,318 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 流式AI环境监控系统. 保留所有权利. 专利号：[待申请]</p>
+                <p>&copy; 2025 流式AI环境监控系统 & 网站导航中心. 保留所有权利.</p>
                 <p>本网站内容仅为技术宣传，不构成投资建议。</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // 移动端导航菜单切换
-        document.addEventListener('DOMContentLoaded', function() {
+        // 网站数据
+        const websites = [
+            {
+                id: 1,
+                name: "信技化生-技术交流网站",
+                url: "https://yohayi.github.io/-history/",
+                description: "信息技术、化学、生物等跨学科技术交流平台，分享最新研究成果和技术实践。",
+                category: "技术交流",
+                icon: "fas fa-code",
+                status: "online",
+                lastUpdated: "2025-11"
+            },
+            {
+                id: 2,
+                name: "惊鸿斋官方网站",
+                url: "https://yohayi.github.io/jinghongzhai--/",
+                description: "文化艺术展示平台，展示书法、绘画、文学等传统艺术与现代创意的融合。",
+                category: "文化艺术",
+                icon: "fas fa-paint-brush",
+                status: "online",
+                lastUpdated: "2025-10"
+            },
+            {
+                id: 3,
+                name: "杭州市教育总结",
+                url: "https://yohayi.github.io/my-personal-edu-website/",
+                description: "杭州市教育体系总结与教育资源分享，涵盖教学方法、课程设计和教育政策分析。",
+                category: "教育",
+                icon: "fas fa-graduation-cap",
+                status: "online",
+                lastUpdated: "2025-09"
+            },
+            {
+                id: 4,
+                name: "教育数据与交流网站",
+                url: "https://yohayi.github.io/2026--/index.html",
+                description: "教育数据分析与教育工作者交流平台，提供教育统计、数据可视化和教学案例分享。",
+                category: "教育数据",
+                icon: "fas fa-chart-bar",
+                status: "online",
+                lastUpdated: "2025-12"
+            },
+            {
+                id: 5,
+                name: "几何弦理论课后交流-网站",
+                url: "https://yohayi.github.io/geometry-string-map/",
+                description: "几何与弦理论学习交流平台，包含课程笔记、讨论区和相关数学物理资源。",
+                category: "学术研究",
+                icon: "fas fa-atom",
+                status: "online",
+                lastUpdated: "2025-08"
+            },
+            {
+                id: 6,
+                name: "BDCG游戏技术与美术素材网站",
+                url: "https://yohayi.github.io/BDCG---/",
+                description: "游戏开发技术与美术素材资源库，包含游戏设计、编程教程和免费美术素材下载。",
+                category: "游戏开发",
+                icon: "fas fa-gamepad",
+                status: "online",
+                lastUpdated: "2025-11"
+            },
+            {
+                id: 7,
+                name: "游海洋个人网站",
+                url: "https://yohayi.github.io/yohayi-/",
+                description: "个人作品集与简历展示，包含项目展示、技能介绍和个人博客。",
+                category: "个人网站",
+                icon: "fas fa-user",
+                status: "online",
+                lastUpdated: "2025-12"
+            },
+            {
+                id: 8,
+                name: "流式AI监控",
+                url: "https://yohayi.github.io/-AI-/",
+                description: "实时流式AI环境监控系统，基于MQTT和实时AI推理的智能监控解决方案。",
+                category: "AI技术",
+                icon: "fas fa-brain",
+                status: "warning",
+                lastUpdated: "2025-12"
+            }
+        ];
+
+        // 选项卡切换功能
+        function setupTabs() {
+            const aiMonitoringTab = document.getElementById('ai-monitoring-tab');
+            const websiteNavigationTab = document.getElementById('website-navigation-tab');
+            const aiMonitoringContent = document.getElementById('ai-monitoring-content');
+            const websiteNavigationContent = document.getElementById('website-navigation-content');
+            const aiMonitoringTabBtn = document.getElementById('ai-monitoring-tab-btn');
+            const websiteNavigationTabBtn = document.getElementById('website-navigation-tab-btn');
+            
+            // 选项卡按钮点击事件
+            aiMonitoringTab.addEventListener('click', () => {
+                switchTab('ai-monitoring');
+            });
+            
+            websiteNavigationTab.addEventListener('click', () => {
+                switchTab('website-navigation');
+            });
+            
+            // 导航菜单点击事件
+            aiMonitoringTabBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                switchTab('ai-monitoring');
+            });
+            
+            websiteNavigationTabBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                switchTab('website-navigation');
+            });
+            
+            // 页脚链接点击事件
+            document.querySelectorAll('.tab-switch').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const tab = e.target.getAttribute('data-tab');
+                    switchTab(tab);
+                    
+                    // 滚动到顶部
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            });
+            
+            // 处理URL哈希
+            window.addEventListener('hashchange', handleHashChange);
+            handleHashChange();
+        }
+        
+        function switchTab(tabName) {
+            const aiMonitoringTab = document.getElementById('ai-monitoring-tab');
+            const websiteNavigationTab = document.getElementById('website-navigation-tab');
+            const aiMonitoringContent = document.getElementById('ai-monitoring-content');
+            const websiteNavigationContent = document.getElementById('website-navigation-content');
+            const aiMonitoringTabBtn = document.getElementById('ai-monitoring-tab-btn');
+            const websiteNavigationTabBtn = document.getElementById('website-navigation-tab-btn');
+            
+            // 移除所有active类
+            aiMonitoringTab.classList.remove('active');
+            websiteNavigationTab.classList.remove('active');
+            aiMonitoringContent.classList.remove('active');
+            websiteNavigationContent.classList.remove('active');
+            aiMonitoringTabBtn.classList.remove('active');
+            websiteNavigationTabBtn.classList.remove('active');
+            
+            // 添加active类到选中的选项卡
+            if (tabName === 'ai-monitoring') {
+                aiMonitoringTab.classList.add('active');
+                aiMonitoringContent.classList.add('active');
+                aiMonitoringTabBtn.classList.add('active');
+                window.location.hash = 'ai-monitoring';
+            } else {
+                websiteNavigationTab.classList.add('active');
+                websiteNavigationContent.classList.add('active');
+                websiteNavigationTabBtn.classList.add('active');
+                window.location.hash = 'website-navigation';
+            }
+        }
+        
+        function handleHashChange() {
+            const hash = window.location.hash;
+            if (hash === '#website-navigation') {
+                switchTab('website-navigation');
+            } else {
+                switchTab('ai-monitoring');
+            }
+        }
+        
+        // 渲染网站卡片
+        function renderWebsites(websitesArray) {
+            const container = document.getElementById('websitesContainer');
+            container.innerHTML = '';
+            
+            websitesArray.forEach(website => {
+                const statusClass = website.status === 'online' ? '' : 
+                                  website.status === 'warning' ? 'warning' : 'danger';
+                const statusText = website.status === 'online' ? '在线' : 
+                                 website.status === 'warning' ? '维护中' : '离线';
+                
+                const card = document.createElement('div');
+                card.className = 'website-card';
+                card.innerHTML = `
+                    <div class="card-header">
+                        <span class="website-category">${website.category}</span>
+                        <h3 class="website-title">
+                            <span class="website-icon">
+                                <i class="${website.icon}"></i>
+                            </span>
+                            ${website.name}
+                        </h3>
+                        <p class="website-description">${website.description}</p>
+                    </div>
+                    <div class="card-content">
+                        <div class="website-meta">
+                            <div class="website-status">
+                                <span class="status-indicator ${statusClass}"></span>
+                                <span>${statusText}</span>
+                            </div>
+                            <div class="website-updated">
+                                <i class="far fa-calendar-alt"></i> 更新于 ${website.lastUpdated}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="${website.url}" target="_blank" class="website-link">
+                            <i class="fas fa-external-link-alt"></i> 访问网站
+                        </a>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+            
+            // 更新统计数字
+            const onlineCount = websitesArray.filter(w => w.status === 'online').length;
+            const warningCount = websitesArray.filter(w => w.status === 'warning').length;
+            
+            document.getElementById('online-count').textContent = onlineCount;
+            document.getElementById('warning-count').textContent = warningCount;
+        }
+        
+        // 搜索功能
+        function setupSearch() {
+            const searchBox = document.getElementById('website-search');
+            
+            searchBox.addEventListener('input', function(e) {
+                const searchTerm = e.target.value.toLowerCase();
+                
+                if (searchTerm.trim() === '') {
+                    renderWebsites(websites);
+                    return;
+                }
+                
+                const filteredWebsites = websites.filter(website => {
+                    return website.name.toLowerCase().includes(searchTerm) ||
+                           website.description.toLowerCase().includes(searchTerm) ||
+                           website.category.toLowerCase().includes(searchTerm);
+                });
+                
+                renderWebsites(filteredWebsites);
+            });
+        }
+        
+        // 移动端导航切换
+        function setupMobileNav() {
             const navToggle = document.querySelector('.nav-toggle');
             const navMenu = document.querySelector('.nav-menu');
             
-            navToggle.addEventListener('click', function() {
-                navMenu.classList.toggle('active');
-            });
-            
-            // 关闭菜单当点击菜单项时（移动端）
-            document.querySelectorAll('.nav-menu a').forEach(item => {
-                item.addEventListener('click', () => {
-                    navMenu.classList.remove('active');
+            if (navToggle && navMenu) {
+                navToggle.addEventListener('click', function() {
+                    navMenu.classList.toggle('active');
+                });
+                
+                // 点击导航链接后关闭菜单
+                document.querySelectorAll('.nav-menu a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        navMenu.classList.remove('active');
+                    });
+                });
+            }
+        }
+        
+        // 平滑滚动
+        function setupSmoothScroll() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    
+                    // 排除选项卡切换链接
+                    if (href === '#ai-monitoring' || href === '#website-navigation') {
+                        return;
+                    }
+                    
+                    if (href !== '#') {
+                        e.preventDefault();
+                        const targetElement = document.querySelector(href);
+                        if (targetElement) {
+                            window.scrollTo({
+                                top: targetElement.offsetTop - 80,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
                 });
             });
+        }
+        
+        // 初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            // 默认显示AI监控内容
+            switchTab('ai-monitoring');
+            
+            // 渲染网站导航
+            renderWebsites(websites);
+            
+            // 设置各种功能
+            setupTabs();
+            setupSearch();
+            setupMobileNav();
+            setupSmoothScroll();
+            
+            // 如果URL中有哈希，切换到对应选项卡
+            if (window.location.hash === '#website-navigation') {
+                switchTab('website-navigation');
+            }
         });
     </script>
 </body>
